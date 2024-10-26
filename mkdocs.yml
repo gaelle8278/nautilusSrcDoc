@@ -1,3 +1,4 @@
 site_name: Nautilus documentation
 site_url: https://gaelle8278.github.io/nautilusSrcDoc
+theme: 
   name: material

@@ -1,4 +1,3 @@
 site_name: Nautilus documentation
-site_url: https://gaelle8278.github.io/SpringAngularNautilus
-theme:
+site_url: https://gaelle8278.github.io/nautilusSrcDoc
   name: material

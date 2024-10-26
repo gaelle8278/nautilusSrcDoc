@@ -1,4 +1,7 @@
+# automatisme de déploiement foruni par Material For Mkdocs : https://squidfunk.github.io/mkdocs-material/publishing-your-site/#github-pages
+# et mkdocs : https://www.mkdocs.org/user-guide/deploying-your-docs/#project-pages
 name: nautilus doc deployment
+run-name : doc deployment
 on:
   push:
     branches:

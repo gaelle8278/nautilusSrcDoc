@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <p>Annoucement bar test</p>
+{% endblock %}
+
+{% block outdated %}
+  <p>Vous consultez une ancienne version.</p>
+  <a href="{{ '../' ~ base_url }}"> 
+    <strong>Cliquez ici pour accéder à la dernière version.</strong>
+  </a>
+{% endblock %}

@@ -1,8 +1,105 @@
 site_name: Nautilus documentation
-site_url: https://gaelle8278.github.io/nautilusSrcDoc
+site_url: https://gaelle8278.github.io/nautilusSrcDoc/
+#site_url: http://localhost:8000
 theme: 
   name: material
+  # to extend,override theme components
+  custom_dir: material_overrides
+  features:
+    ### navigation parameters ###
+    # instant loading
+    - navigation.instant
+    - navigation.instant.progress
+    # top menu = top-level sections as links in top menu
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # all top-level sub-sections are grouped in sidebar of top-section
+    - navigation.sections
+    # expand inner subsections
+    # navigation.expand
+    # to have page on section (+index.md file in respective folder) 
+    - navigation.indexes
+    # toc integrated in the left sidebar
+    - toc.integrate
+    # back to top button
+    - navigation.top
+    ### header configuration ###
+    - header.autohide
+    - announce.dismiss
+    ### footer navigation ###
+    - navigation.footer
+    ### search parameters ###
+    - search.suggest
+    - search.highlight
+  palette:
+    # Palette toggle for light mode
+    - scheme: nautilus
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+    logo: material/submarine
+  favicon: images/faviconLetter/favicon.ico
+  font:
+    text: Open Sans
+    code: Source Code Pro
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - javascripts/extra.js
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/gaelle8278/nautilusSrcDoc
+      name: Project on Github
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+  version:
+    provider: mike
+plugins:
+  - search
+  - tags:
+      tags_file: index/tags.md
+  - social
+markdown_extensions:
+  # Python Markdown
+  - toc:
+      permalink: true
+  # Python Markdown Extensions
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - material_overrides/.icons
+copyright: Copyright &copy; 2025 Crafted By Gaëlle Rauffet
+nav: 
+nav:
+  - Accueil: index.md
+  - Fonctionnalités:
+    - features/index.md
+    - Homepage: features/homepage.md
+    - Administration:
+      - features/administration/index.md
+      - Gestion des livres: features/administration/bookmanagement.md
+    - Recherche:
+      - features/search/index.md
+      - Rechercher un livre: features/search/booksearch.md
+  - Reference:
+    - reference/index.md
+  - Index: index/tags.md
+  

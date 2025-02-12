@@ -35,6 +35,7 @@ jobs:
       - run : pip install mike
       - run: sudo apt-get install pngquant 
 #      - run: mkdocs gh-deploy --force
+      - run: git pull
       - run: mike deploy --push --update-aliases 0.1 latest
       - run: mike set-default --push latest
       - run: mike alias 0.1 init

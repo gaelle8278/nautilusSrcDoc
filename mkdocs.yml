@@ -68,6 +68,8 @@ extra:
     CSS: css
   version:
     provider: mike
+    default: latest
+    alias: true
 plugins:
   - search
   - tags:
@@ -87,7 +89,6 @@ markdown_extensions:
         custom_icons:
           - material_overrides/.icons
 copyright: Copyright &copy; 2025 Crafted By Gaëlle Rauffet
-nav: 
 nav:
   - Accueil: index.md
   - Fonctionnalités:

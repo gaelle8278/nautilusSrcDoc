@@ -1,7 +1,10 @@
 site_name: Nautilus documentation
 site_url: https://gaelle8278.github.io/nautilusSrcDoc/
+# config of repo source of documentation 
 repo_url: https://github.com/gaelle8278/nautilusSrcDoc
 repo_name: gaelle8278/nautilusSrcDoc
+edit_uri: edit/main/docs/
+# theme configuration
 theme: 
   name: material
   # to extend,override theme components
@@ -32,6 +35,8 @@ theme:
     ### search parameters ###
     - search.suggest
     - search.highlight
+    ### to edit source of documentation in git repo
+    - content.action.edit
   palette:
     # Palette toggle for light mode
     - scheme: nautilus
@@ -51,6 +56,7 @@ theme:
       css:  fontawesome/brands/css3
     logo: material/submarine
     repo: fontawesome/brands/git-alt
+    edit: material/pencil
   favicon: images/faviconLetter/favicon.ico
   font:
     text: Open Sans
@@ -71,7 +77,7 @@ extra:
   version:
     provider: mike
     default: latest
-    alias: true
+    alias: true #to show alias in selector of version
 plugins:
   - search
   - tags:
@@ -95,6 +101,7 @@ markdown_extensions:
       options:
         custom_icons:
           - material_overrides/.icons
+# other congigs
 copyright: Copyright &copy; 2025 Crafted By Gaëlle Rauffet
 nav:
   - Accueil: index.md

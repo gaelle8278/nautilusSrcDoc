@@ -1,6 +1,7 @@
 site_name: Nautilus documentation
 site_url: https://gaelle8278.github.io/nautilusSrcDoc/
-#site_url: http://localhost:8000
+repo_url: https://github.com/gaelle8278/nautilusSrcDoc
+repo_name: gaelle8278/nautilusSrcDoc
 theme: 
   name: material
   # to extend,override theme components
@@ -49,6 +50,7 @@ theme:
       js: fontawesome/brands/js
       css:  fontawesome/brands/css3
     logo: material/submarine
+    repo: fontawesome/brands/git-alt
   favicon: images/faviconLetter/favicon.ico
   font:
     text: Open Sans
@@ -75,6 +77,11 @@ plugins:
   - tags:
       tags_file: index/tags.md
   - social
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true
+  - git-authors
 markdown_extensions:
   # Python Markdown
   - toc:
